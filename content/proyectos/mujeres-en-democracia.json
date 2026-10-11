@@ -1,0 +1,27 @@
+{
+  "organizacion": "",
+  "resumen": "",
+  "foto": "",
+  "foto_alt": "",
+  "destacado": false,
+  "convocatoria": "",
+  "anio": "",
+  "monto": "",
+  "rol": "",
+  "resultado": "",
+  "reto": "",
+  "idea": "",
+  "que_hicimos": "",
+  "como": "",
+  "resultados": "",
+  "galeria": [],
+  "titulo": "Mujeres en Democracia y capacidades ciudadanas para la participación en asuntos públicos",
+  "tipo": "incubado",
+  "estado": "en-desarrollo",
+  "ambitos": [
+    "Ciudadanía",
+    "Participación"
+  ],
+  "orden": 8,
+  "enlace": ""
+}

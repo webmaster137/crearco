@@ -1,0 +1,28 @@
+{
+  "organizacion": "FUNDEAFRO",
+  "resumen": "",
+  "foto": "/uploads/proyecto-caminos-paisaje.jpg",
+  "foto_alt": "Personas caminan por un sendero rodeado de montaña",
+  "destacado": true,
+  "convocatoria": "",
+  "anio": "",
+  "monto": "",
+  "rol": "",
+  "resultado": "",
+  "reto": "",
+  "idea": "",
+  "que_hicimos": "",
+  "como": "",
+  "resultados": "",
+  "galeria": [],
+  "titulo": "Caminos del Paisaje Cultural Cafetero",
+  "tipo": "incubado",
+  "estado": "aprobado",
+  "ambitos": [
+    "Patrimonio",
+    "Oralidad",
+    "Territorio"
+  ],
+  "orden": 6,
+  "enlace": ""
+}

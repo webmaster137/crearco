@@ -1,0 +1,27 @@
+{
+  "organizacion": "",
+  "resumen": "Calculadora, investigación por ciudades y reportes ciudadanos para repartir mejor los baños públicos, con enfoque de género.",
+  "foto": "",
+  "foto_alt": "",
+  "destacado": false,
+  "convocatoria": "",
+  "anio": "",
+  "monto": "",
+  "rol": "",
+  "resultado": "",
+  "reto": "",
+  "idea": "",
+  "que_hicimos": "",
+  "como": "",
+  "resultados": "",
+  "galeria": [],
+  "titulo": "Baños Justos",
+  "tipo": "propio",
+  "estado": "por-ejecutar",
+  "ambitos": [
+    "Ciudadanía",
+    "Innovación"
+  ],
+  "orden": 4,
+  "enlace": "/banos"
+}

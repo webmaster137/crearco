@@ -1,0 +1,55 @@
+{
+  "titulo": "No hay nada más democrático que usar un baño",
+  "dato_grande": "55–65 %",
+  "dato_grande_texto": "más tiempo tarda, en promedio, una visita al baño de mujeres.",
+  "intro": "Pero la fila no es igual para todos. Por qué las mujeres siempre esperan más, qué dice la evidencia y cómo deberían repartirse los baños públicos.",
+  "boton_intro": "Ver cómo pasa",
+  "datos": [
+    {
+      "valor": "34×",
+      "texto": "más espera pueden tener las mujeres en un baño congestionado"
+    },
+    {
+      "valor": "2 a 1",
+      "texto": "la proporción de aparatos que recomienda la investigación"
+    },
+    {
+      "valor": "0 de 5",
+      "texto": "centros comerciales revisados publican sus baños por género"
+    }
+  ],
+  "pasos_simulacion": [
+    {
+      "titulo": "Mismo número de baños",
+      "texto": "Un sábado en un centro comercial. Hombres y mujeres tienen cinco aparatos cada uno. Mientras llega poca gente, nadie espera."
+    },
+    {
+      "titulo": "Llega la hora pico",
+      "texto": "Ahora entra la misma cantidad de gente a los dos lados. Mira las filas: la de hombres fluye, la de mujeres crece y no para."
+    },
+    {
+      "titulo": "Una visita de ellas tarda más",
+      "texto": "Entre 55% y 65% más, por la ropa, la menstruación, acompañar niños y la anatomía. Con los mismos aparatos, salen más despacio de lo que llegan. Así se forma la fila."
+    },
+    {
+      "titulo": "Hay una solución hace décadas, pero nadie la aplica",
+      "texto": "Mover un muro. Los orinales ocupan menos espacio, así que los hombres conservan sus cinco aparatos y las mujeres pasan de cinco a ocho. Las dos filas se emparejan."
+    }
+  ],
+  "calculadora_titulo": "¿Cómo deberían estar divididos tus baños?",
+  "calculadora_texto": "Ingresa los datos de un lugar. Con un modelo de colas —no una proporción fija— la herramienta estima las esperas y la distribución justa.",
+  "calculadora_nota": "Estimación ilustrativa. Tiempos de uso asumidos: 90 s y 140 s, según la literatura de potty parity.",
+  "lugares_titulo": "Investigación por ciudades",
+  "lugares_texto": "Lugares públicos reconocibles. El contexto es real; el conteo de baños está marcado como estimado hasta verificarse en terreno.",
+  "lugares_nota": "El número de baños por género no es información pública en Colombia. Esa ausencia de datos es parte de lo que este proyecto busca visibilizar.",
+  "reportar_titulo": "Reporta un baño",
+  "reportar_texto": "En diez segundos. Solo lo esencial es obligatorio.",
+  "reportar_publico": "Lugar público (centro comercial, estadio): la fuerza está en el volumen. Cuando varias personas reportan algo parecido, el dato se marca como confiable.",
+  "reportar_privado": "Lugar privado (una oficina): basta uno o dos reportes. Se muestra como reporte individual, sin exigir volumen.",
+  "reportar_nota": "Cada reporte se revisa antes de sumarse a los datos. No pedimos fotos ni tu ubicación por ahora.",
+  "bibliografia_titulo": "Bibliografía",
+  "bibliografia_texto": "Base viva. El equipo investigador seguirá alimentando esta sección.",
+  "equipo_titulo": "Equipo",
+  "equipo_texto": "Quiénes estamos detrás de Baños Justos.",
+  "pie_nota": "Prototipo. Los datos de baños están sujetos a verificación en terreno."
+}

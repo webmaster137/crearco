@@ -1,0 +1,27 @@
+{
+  "organizacion": "",
+  "resumen": "Experiencias de aprendizaje de inglés que llevan el aprendizaje fuera del aula y conectan a jóvenes con su entorno.",
+  "foto": "/uploads/proyecto-hello-world.jpg",
+  "foto_alt": "Manos dibujando prototipos de pantallas sobre papel",
+  "destacado": false,
+  "convocatoria": "",
+  "anio": "",
+  "monto": "",
+  "rol": "",
+  "resultado": "",
+  "reto": "",
+  "idea": "",
+  "que_hicimos": "",
+  "como": "",
+  "resultados": "",
+  "galeria": [],
+  "titulo": "Hello World!",
+  "tipo": "propio",
+  "estado": "activo",
+  "ambitos": [
+    "Educación",
+    "Juventud"
+  ],
+  "orden": 1,
+  "enlace": ""
+}

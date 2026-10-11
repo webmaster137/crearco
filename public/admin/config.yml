@@ -1,0 +1,366 @@
+# ─────────────────────────────────────────────────────────────
+#  Configuración del panel de administración (Sveltia CMS)
+#  ANTES DE PUBLICAR: cambia "repo" por tu usuario/repositorio de GitHub
+#  y "site_url" por tu dominio.
+# ─────────────────────────────────────────────────────────────
+backend:
+  name: github
+  repo: TU-USUARIO/crearco-site
+  branch: main
+
+site_url: https://TU-DOMINIO.com
+display_url: https://TU-DOMINIO.com
+logo_url: /favicon.svg
+locale: es
+
+media_folder: public/uploads
+public_folder: /uploads
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  # ───────────── PÁGINA DE INICIO ─────────────
+  - name: inicio
+    label: "Página de inicio"
+    files:
+      - name: inicio
+        label: "Textos de la página de inicio"
+        file: content/inicio.json
+        fields:
+          - label: "Portada"
+            name: portada
+            widget: object
+            collapsed: true
+            fields:
+            - { label: "Frase sobre el título", name: etiqueta, widget: string, required: false }
+            - { label: "Título", name: titulo, widget: string, required: false }
+            - { label: "Texto", name: texto, widget: text, required: false }
+            - { label: "Botón principal", name: boton_principal, widget: string, required: false }
+            - { label: "Botón secundario", name: boton_secundario, widget: string, required: false }
+            - { label: "Foto grande (círculo)", name: foto_principal, widget: image, required: false }
+            - { label: "Descripción de la foto grande (para personas con lector de pantalla)", name: foto_principal_alt, widget: string, required: false }
+            - { label: "Foto pequeña (círculo)", name: foto_secundaria, widget: image, required: false }
+            - { label: "Descripción de la foto pequeña", name: foto_secundaria_alt, widget: string, required: false }
+          - label: "Qué hacemos"
+            name: que_hacemos
+            widget: object
+            collapsed: true
+            fields:
+            - { label: "Título de la sección", name: titulo, widget: string, required: false }
+            - { label: "Creamos: título", name: creamos_titulo, widget: string, required: false }
+            - { label: "Creamos: subtítulo", name: creamos_subtitulo, widget: string, required: false }
+            - { label: "Creamos: texto", name: creamos_texto, widget: text, required: false }
+            - { label: "Creamos: texto del enlace", name: creamos_enlace, widget: string, required: false }
+            - { label: "Incubamos: título", name: incubamos_titulo, widget: string, required: false }
+            - { label: "Incubamos: subtítulo", name: incubamos_subtitulo, widget: string, required: false }
+            - { label: "Incubamos: texto", name: incubamos_texto, widget: text, required: false }
+            - { label: "Incubamos: frase destacada", name: incubamos_destacado, widget: string, required: false }
+            - { label: "Incubamos: texto bajo la frase", name: incubamos_destacado_texto, widget: text, required: false }
+            - { label: "Incubamos: texto del enlace", name: incubamos_enlace, widget: string, required: false }
+          - label: "Proceso (de la idea al proyecto)"
+            name: proceso
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Título", name: titulo, widget: string }
+              - { label: "Texto", name: texto, widget: text }
+              - label: "Pasos (en orden)"
+                name: pasos
+                widget: list
+                label_singular: "paso"
+                summary: "{{fields.titulo}}"
+                fields:
+                  - { label: "Título del paso", name: titulo, widget: string }
+                  - { label: "Texto", name: texto, widget: text }
+          - label: "Casos de la incubadora (títulos)"
+            name: casos
+            widget: object
+            collapsed: true
+            fields:
+            - { label: "Título", name: titulo, widget: string, required: false }
+            - { label: "Texto", name: texto, widget: text, required: false, hint: "Los casos salen de los proyectos marcados como destacados en la colección Proyectos." }
+          - label: "Resultados (cifras)"
+            name: resultados
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Título", name: titulo, widget: string }
+              - label: "Cifras"
+                name: cifras
+                widget: list
+                label_singular: "cifra"
+                summary: "{{fields.valor}} {{fields.texto}}"
+                fields:
+                  - { label: "Cifra", name: valor, widget: string, hint: "Ej.: +200, 66, +30" }
+                  - { label: "Unidad (opcional)", name: unidad, widget: string, required: false, hint: "Ej.: millones de COP" }
+                  - { label: "Qué significa", name: texto, widget: string }
+          - label: "Portafolio (títulos)"
+            name: portafolio
+            widget: object
+            collapsed: true
+            fields:
+            - { label: "Título", name: titulo, widget: string, required: false }
+            - { label: "Texto", name: texto, widget: text, required: false }
+          - label: "Servicios (para tu organización)"
+            name: servicios
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Título", name: titulo, widget: string }
+              - { label: "Texto", name: texto, widget: text }
+              - { label: "Texto del botón", name: boton, widget: string }
+              - label: "Servicios"
+                name: lista
+                widget: list
+                label_singular: "servicio"
+                summary: "{{fields.titulo}}"
+                fields:
+                  - label: "Ícono"
+                    name: icono
+                    widget: select
+                    options:
+                      - { label: "Regla y lápiz (diseño)", value: diseno }
+                      - { label: "Lista (formulación)", value: formulacion }
+                      - { label: "Binoculares (oportunidades)", value: oportunidades }
+                      - { label: "Planta (incubación)", value: incubacion }
+                      - { label: "Ruta (gestión)", value: gestion }
+                  - { label: "Título", name: titulo, widget: string }
+                  - { label: "Texto", name: texto, widget: text }
+          - label: "Nosotros"
+            name: nosotros
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Título", name: titulo, widget: string }
+              - { label: "Texto", name: texto, widget: text }
+              - { label: "Foto", name: foto, widget: image }
+              - { label: "Descripción de la foto", name: foto_alt, widget: string }
+              - { label: "Título del bloque de equipo", name: equipo_titulo, widget: string }
+              - label: "Conceptos (Diseño, Gestión, Territorio)"
+                name: conceptos
+                widget: list
+                label_singular: "concepto"
+                summary: "{{fields.titulo}}"
+                fields:
+                  - { label: "Título", name: titulo, widget: string }
+                  - { label: "Texto", name: texto, widget: text }
+          - label: "Contacto"
+            name: contacto
+            widget: object
+            collapsed: true
+            fields:
+            - { label: "Título", name: titulo, widget: string, required: false }
+            - { label: "Texto", name: texto, widget: text, required: false }
+            - { label: "Texto del botón", name: boton, widget: string, required: false }
+            - { label: "Mensaje al enviar: título", name: mensaje_exito_titulo, widget: string, required: false }
+            - { label: "Mensaje al enviar: texto", name: mensaje_exito_texto, widget: text, required: false }
+
+  # ───────────── PROYECTOS ─────────────
+  - name: proyectos
+    label: "Proyectos"
+    label_singular: "proyecto"
+    folder: content/proyectos
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: titulo
+    summary: "{{titulo}} ({{estado}})"
+    sortable_fields: [orden, titulo]
+    fields:
+      - { label: "Título", name: titulo, widget: string }
+      - label: "Tipo"
+        name: tipo
+        widget: select
+        options:
+          - { label: "Proyecto propio", value: propio }
+          - { label: "Proyecto incubado (de otra organización)", value: incubado }
+      - label: "Estado"
+        name: estado
+        widget: select
+        options:
+          - { label: "En marcha", value: activo }
+          - { label: "Aprobado", value: aprobado }
+          - { label: "En desarrollo / formulación", value: en-desarrollo }
+          - { label: "Por ejecutar", value: por-ejecutar }
+      - label: "Ámbitos (el primero define el color)"
+        name: ambitos
+        widget: select
+        multiple: true
+        options:
+          - Educación
+          - Juventud
+          - Emprendimiento
+          - Innovación
+          - Economía circular
+          - Cultura
+          - Patrimonio
+          - Oralidad
+          - Territorio
+          - Comunidad
+          - Infancia
+          - Ciudadanía
+          - Participación
+      - { label: "Organización aliada", name: organizacion, widget: string, required: false }
+      - { label: "Resumen (se ve en las tarjetas)", name: resumen, widget: text, required: false }
+      - { label: "Foto principal", name: foto, widget: image, required: false, hint: "Si no hay foto, se muestra el símbolo de la marca." }
+      - { label: "Descripción de la foto", name: foto_alt, widget: string, required: false }
+      - { label: "Orden en el portafolio (número menor, primero)", name: orden, widget: number, value_type: int, default: 50 }
+      - { label: "Mostrar como caso destacado en el inicio", name: destacado, widget: boolean, default: false }
+      - { label: "Enlace propio (solo si el proyecto tiene su propia página, ej.: /banos)", name: enlace, widget: string, required: false }
+      - { label: "Convocatoria", name: convocatoria, widget: string, required: false }
+      - { label: "Año", name: anio, widget: string, required: false }
+      - { label: "Monto aprobado", name: monto, widget: string, required: false }
+      - { label: "Rol de Creando Arcoíris", name: rol, widget: text, required: false }
+      - { label: "Resultado (resumen corto)", name: resultado, widget: text, required: false }
+      - { label: "El reto", name: reto, widget: text, required: false }
+      - { label: "La idea", name: idea, widget: text, required: false }
+      - { label: "Qué hicimos", name: que_hicimos, widget: text, required: false }
+      - { label: "Cómo lo desarrollamos", name: como, widget: text, required: false }
+      - { label: "Resultados (detalle)", name: resultados, widget: text, required: false }
+      - label: "Galería de fotos"
+        name: galeria
+        widget: list
+        required: false
+        field: { label: "Foto", name: foto, widget: image }
+
+  # ───────────── EQUIPO ─────────────
+  - name: equipo
+    label: "Equipo de Creando Arcoíris"
+    label_singular: "persona"
+    folder: content/equipo
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: nombre
+    summary: "{{nombre}}"
+    fields:
+      - { label: "Nombre", name: nombre, widget: string }
+      - { label: "Cargo o área", name: rol, widget: string, required: false }
+      - { label: "Perfil breve", name: perfil, widget: text, required: false }
+      - { label: "Foto", name: foto, widget: image, required: false }
+      - { label: "Orden", name: orden, widget: number, value_type: int, default: 50 }
+
+  # ───────────── AJUSTES GENERALES ─────────────
+  - name: ajustes
+    label: "Ajustes generales"
+    files:
+      - name: ajustes
+        label: "Datos del sitio, contacto y pie de página"
+        file: content/ajustes.json
+        fields:
+          - { label: "Nombre de la organización", name: nombre, widget: string }
+          - { label: "Título para buscadores", name: titulo_sitio, widget: string }
+          - { label: "Descripción para buscadores", name: descripcion_sitio, widget: text }
+          - { label: "Correo de contacto (se muestra en el pie)", name: correo, widget: string, required: false }
+          - { label: "Teléfono (se muestra en el pie)", name: telefono, widget: string, required: false }
+          - { label: "Texto del pie de página", name: texto_pie, widget: text }
+          - { label: "Ámbitos en el pie de página", name: ambitos_pie, widget: text }
+          - label: "Redes sociales"
+            name: redes
+            widget: list
+            required: false
+            fields:
+              - { label: "Nombre", name: nombre, widget: string }
+              - { label: "Enlace", name: enlace, widget: string }
+
+  # ───────────── BAÑOS JUSTOS ─────────────
+  - name: banos_textos
+    label: "Baños Justos: textos"
+    files:
+      - name: banos_pagina
+        label: "Textos de la página"
+        file: content/banos/pagina.json
+        fields:
+          - { label: "Título", name: titulo, widget: string }
+          - { label: "Dato grande", name: dato_grande, widget: string }
+          - { label: "Texto del dato grande", name: dato_grande_texto, widget: string }
+          - { label: "Introducción", name: intro, widget: text }
+          - { label: "Botón de la introducción", name: boton_intro, widget: string }
+          - label: "Tres datos destacados"
+            name: datos
+            widget: list
+            label_singular: "dato"
+            summary: "{{fields.valor}}"
+            fields:
+              - { label: "Cifra", name: valor, widget: string }
+              - { label: "Qué significa", name: texto, widget: string }
+          - label: "Pasos de la simulación (son 4; cada uno activa una escena)"
+            name: pasos_simulacion
+            widget: list
+            label_singular: "paso"
+            min: 4
+            max: 4
+            summary: "{{fields.titulo}}"
+            fields:
+              - { label: "Título", name: titulo, widget: string }
+              - { label: "Texto", name: texto, widget: text }
+          - { label: "Calculadora: título", name: calculadora_titulo, widget: string }
+          - { label: "Calculadora: texto", name: calculadora_texto, widget: text }
+          - { label: "Calculadora: nota", name: calculadora_nota, widget: text }
+          - { label: "Lugares: título", name: lugares_titulo, widget: string }
+          - { label: "Lugares: texto", name: lugares_texto, widget: text }
+          - { label: "Lugares: nota", name: lugares_nota, widget: text }
+          - { label: "Reportar: título", name: reportar_titulo, widget: string }
+          - { label: "Reportar: texto", name: reportar_texto, widget: text }
+          - { label: "Reportar: lugar público", name: reportar_publico, widget: text }
+          - { label: "Reportar: lugar privado", name: reportar_privado, widget: text }
+          - { label: "Reportar: nota", name: reportar_nota, widget: text }
+          - { label: "Bibliografía: título", name: bibliografia_titulo, widget: string }
+          - { label: "Bibliografía: texto", name: bibliografia_texto, widget: text }
+          - { label: "Equipo: título", name: equipo_titulo, widget: string }
+          - { label: "Equipo: texto", name: equipo_texto, widget: string }
+          - { label: "Nota final", name: pie_nota, widget: string }
+
+  - name: banos_lugares
+    label: "Baños Justos: lugares"
+    label_singular: "lugar"
+    folder: content/banos/lugares
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: nombre
+    summary: "{{nombre}}, {{ciudad}}"
+    fields:
+      - { label: "Nombre del lugar", name: nombre, widget: string }
+      - { label: "Ciudad", name: ciudad, widget: string }
+      - { label: "Área (texto que se muestra)", name: area, widget: string, hint: "Ej.: 134.000 m²" }
+      - { label: "Área en m² (solo número, para la estimación)", name: area_m2, widget: number, value_type: int, required: false }
+      - { label: "Comercio", name: locales, widget: string, hint: "Ej.: 193 locales" }
+      - { label: "Contexto verificado", name: verificado, widget: boolean, default: false }
+      - { label: "Orden", name: orden, widget: number, value_type: int, default: 50 }
+
+  - name: banos_bibliografia
+    label: "Baños Justos: bibliografía"
+    label_singular: "fuente"
+    folder: content/banos/bibliografia
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: titulo
+    summary: "{{titulo}}"
+    fields:
+      - { label: "Título de la fuente", name: titulo, widget: string }
+      - { label: "Detalle (autoría, revista, idea principal)", name: detalle, widget: text, required: false }
+      - { label: "Enlace (opcional)", name: enlace, widget: string, required: false }
+      - { label: "Orden", name: orden, widget: number, value_type: int, default: 50 }
+
+  - name: banos_equipo
+    label: "Baños Justos: equipo"
+    label_singular: "persona"
+    folder: content/banos/equipo
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: nombre
+    summary: "{{nombre}}"
+    fields:
+      - { label: "Nombre", name: nombre, widget: string }
+      - { label: "Rol", name: rol, widget: string, required: false }
+      - { label: "Orden", name: orden, widget: number, value_type: int, default: 50 }

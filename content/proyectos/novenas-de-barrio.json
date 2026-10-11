@@ -1,0 +1,28 @@
+{
+  "organizacion": "",
+  "resumen": "",
+  "foto": "/uploads/proyecto-novenas-barrio.jpg",
+  "foto_alt": "Un grupo posa frente a un muro de ladrillo mientras alguien toma una foto",
+  "destacado": true,
+  "convocatoria": "",
+  "anio": "",
+  "monto": "",
+  "rol": "",
+  "resultado": "",
+  "reto": "",
+  "idea": "",
+  "que_hicimos": "",
+  "como": "",
+  "resultados": "",
+  "galeria": [],
+  "titulo": "Novenas de Barrio: 1.500 sonrisas en Navidad",
+  "tipo": "incubado",
+  "estado": "aprobado",
+  "ambitos": [
+    "Cultura",
+    "Comunidad",
+    "Infancia"
+  ],
+  "orden": 7,
+  "enlace": ""
+}

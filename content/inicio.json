@@ -1,0 +1,149 @@
+{
+  "portada": {
+    "etiqueta": "Agencia de desarrollo de proyectos sociales",
+    "titulo": "Convertimos ideas en proyectos que transforman territorios.",
+    "texto": "Diseñamos, desarrollamos e incubamos proyectos de educación, emprendimiento, cultura y ciudadanía que se convierten en oportunidades para las personas y los territorios.",
+    "boton_principal": "Conoce nuestros proyectos",
+    "boton_secundario": "Hablemos de tu proyecto",
+    "foto_principal": "/uploads/hero-certificados.jpg",
+    "foto_principal_alt": "Jóvenes sostienen sus certificados frente a un mural",
+    "foto_secundaria": "/uploads/jovenes-territorio.jpg",
+    "foto_secundaria_alt": "Jóvenes conversan en círculo al aire libre"
+  },
+  "que_hacemos": {
+    "titulo": "Dos formas de trabajar, un mismo propósito.",
+    "creamos_titulo": "Creamos proyectos",
+    "creamos_subtitulo": "Proyectos propios",
+    "creamos_texto": "Diseñamos y desarrollamos nuestras propias iniciativas para experimentar nuevas formas de aprender, crear y generar oportunidades.",
+    "creamos_enlace": "Ver proyectos propios",
+    "incubamos_titulo": "Incubamos proyectos",
+    "incubamos_subtitulo": "Incubadora de proyectos sociales",
+    "incubamos_texto": "Trabajamos con organizaciones sociales para transformar sus ideas en proyectos estructurados y fortalecer sus capacidades para identificar oportunidades, formular propuestas y acceder a financiación.",
+    "incubamos_destacado": "De una idea a un proyecto listo para presentar.",
+    "incubamos_destacado_texto": "Trabajo práctico, sesiones intensivas, capacitación y acompañamiento.",
+    "incubamos_enlace": "Conoce la incubadora"
+  },
+  "proceso": {
+    "titulo": "De la idea al proyecto.",
+    "texto": "El objetivo no es solo ganar una convocatoria. Es salir del proceso con un proyecto y nuevas capacidades para desarrollarlo.",
+    "pasos": [
+      {
+        "titulo": "Idea",
+        "texto": "Llegas con una iniciativa, una necesidad o una oportunidad que quieres convertir en proyecto."
+      },
+      {
+        "titulo": "Exploramos",
+        "texto": "Entendemos el problema, la oportunidad y el contexto. Identificamos actores, recursos y condiciones del territorio."
+      },
+      {
+        "titulo": "Diseñamos",
+        "texto": "Definimos objetivos, población, metodología y resultados esperados. El proyecto toma forma."
+      },
+      {
+        "titulo": "Formulamos",
+        "texto": "Construimos actividades, presupuesto, indicadores y estructura técnica lista para presentar."
+      },
+      {
+        "titulo": "Postulamos",
+        "texto": "Identificamos convocatorias y oportunidades de financiación. Preparamos y afinamos la propuesta."
+      },
+      {
+        "titulo": "Fortalecemos capacidades",
+        "texto": "La organización termina con un proyecto desarrollado y nuevas herramientas para seguir formulando futuras iniciativas."
+      }
+    ]
+  },
+  "casos": {
+    "titulo": "Ideas que se convirtieron en proyectos.",
+    "texto": "Tres organizaciones llegaron con una idea y participaron por primera vez en sus respectivas convocatorias. Sus proyectos fueron aprobados."
+  },
+  "resultados": {
+    "titulo": "Ideas que ya están pasando.",
+    "cifras": [
+      {
+        "valor": "+200",
+        "unidad": "millones de COP",
+        "texto": "en recursos gestionados para proyectos sociales"
+      },
+      {
+        "valor": "+600",
+        "unidad": "",
+        "texto": "registros de patrimonio cultural desarrollados"
+      },
+      {
+        "valor": "66",
+        "unidad": "",
+        "texto": "emprendimientos acompañados"
+      },
+      {
+        "valor": "+30",
+        "unidad": "",
+        "texto": "jóvenes vinculados actualmente a procesos de aprendizaje"
+      }
+    ]
+  },
+  "portafolio": {
+    "titulo": "Nuestro portafolio.",
+    "texto": "Proyectos que creamos directamente y proyectos que ayudamos a convertir en realidad junto a otras organizaciones."
+  },
+  "servicios": {
+    "titulo": "¿Tienes una idea? La desarrollamos contigo.",
+    "texto": "Si tienes una iniciativa, una convocatoria, una necesidad en tu organización o una idea que quieres convertir en proyecto, podemos trabajar juntos.",
+    "boton": "Cuéntanos tu idea",
+    "lista": [
+      {
+        "icono": "diseno",
+        "titulo": "Diseño de proyectos",
+        "texto": "Convertir una necesidad o idea inicial en una propuesta estructurada."
+      },
+      {
+        "icono": "formulacion",
+        "titulo": "Formulación",
+        "texto": "Construir objetivos, metodología, actividades, presupuesto, indicadores y resultados."
+      },
+      {
+        "icono": "oportunidades",
+        "titulo": "Identificación de oportunidades",
+        "texto": "Buscar y analizar convocatorias y fuentes de financiación compatibles con la iniciativa."
+      },
+      {
+        "icono": "incubacion",
+        "titulo": "Incubación de proyectos",
+        "texto": "Trabajar con los equipos de las organizaciones para desarrollar el proyecto mientras fortalecen sus propias capacidades."
+      },
+      {
+        "icono": "gestion",
+        "titulo": "Gestión y desarrollo",
+        "texto": "Acompañar la ejecución, coordinación, seguimiento y articulación de proyectos."
+      }
+    ]
+  },
+  "nosotros": {
+    "titulo": "Somos una agencia de proyectos sociales.",
+    "texto": "Creando Arcoíris nace de la convicción de que las buenas ideas necesitan creatividad, estructura y gestión para convertirse en proyectos capaces de generar cambios reales.",
+    "foto": "/uploads/jovenes-territorio.jpg",
+    "foto_alt": "Jóvenes conversan en círculo al aire libre durante un proceso de aprendizaje",
+    "conceptos": [
+      {
+        "titulo": "Diseño",
+        "texto": "Creamos ideas, metodologías y soluciones. El diseño es nuestra forma de pensar los proyectos antes de construirlos."
+      },
+      {
+        "titulo": "Gestión",
+        "texto": "Convertimos las ideas en proyectos, articulamos actores y buscamos oportunidades para hacerlos realidad."
+      },
+      {
+        "titulo": "Territorio",
+        "texto": "Diseñamos desde las realidades, capacidades y oportunidades de cada contexto. El territorio no es el escenario, es el punto de partida."
+      }
+    ],
+    "equipo_titulo": "Nuestro equipo"
+  },
+  "contacto": {
+    "titulo": "¿Tienes una idea? Hablemos.",
+    "texto": "Si tienes una iniciativa, una convocatoria, una necesidad en tu organización o una idea que quieres convertir en proyecto, queremos conocerla.",
+    "boton": "Hablemos de tu proyecto",
+    "mensaje_exito_titulo": "Recibimos tu mensaje.",
+    "mensaje_exito_texto": "Te respondemos al correo que nos dejaste."
+  }
+}

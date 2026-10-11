@@ -1,0 +1,27 @@
+{
+  "organizacion": "",
+  "resumen": "Programa de aprendizaje haciendo en el que jóvenes exploran oportunidades de emprendimiento e innovación a partir de recursos y conocimientos del territorio.",
+  "foto": "/uploads/proyecto-semillero-hacedores.jpg",
+  "foto_alt": "Dos jóvenes trabajan sobre una mesa con materiales de taller",
+  "destacado": false,
+  "convocatoria": "",
+  "anio": "",
+  "monto": "",
+  "rol": "",
+  "resultado": "",
+  "reto": "",
+  "idea": "",
+  "que_hicimos": "",
+  "como": "",
+  "resultados": "",
+  "galeria": [],
+  "titulo": "Semillero de Hacedores",
+  "tipo": "propio",
+  "estado": "activo",
+  "ambitos": [
+    "Emprendimiento",
+    "Innovación"
+  ],
+  "orden": 2,
+  "enlace": ""
+}
