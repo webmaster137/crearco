@@ -8,8 +8,8 @@ backend:
   repo: webmaster137/crearco
   branch: main
 
-site_url: https://TU-DOMINIO.com
-display_url: https://TU-DOMINIO.com
+site_url: https://gregarious-flan-3e8b57.netlify.app/
+display_url: https://gregarious-flan-3e8b57.netlify.app/
 logo_url: /favicon.svg
 locale: es
 
