@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 type Variante = "lima" | "teal" | "contorno" | "contorno-claro";
 
 const base =
-  "inline-flex h-12 items-center justify-center rounded-xl px-6 font-display text-[0.97rem] font-semibold tracking-[-0.005em] transition-colors duration-200";
+  "inline-flex h-12 items-center justify-center rounded-xl px-6 font-display text-[0.97rem] font-semibold tracking-[-0.005em] transition duration-200 active:scale-[0.98]";
 
 const variantes: Record<Variante, string> = {
   lima: "bg-lime text-teal-deep hover:bg-white",

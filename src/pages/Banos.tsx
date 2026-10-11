@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Boton from "@/components/Boton";
 import Simulacion from "@/banos/Simulacion";
 import Calculadora from "@/banos/Calculadora";
@@ -36,10 +35,7 @@ export default function Banos() {
     <>
       <section className="bg-teal-deep pb-24 pt-32 text-white md:pb-28 md:pt-40">
         <div className="mx-auto max-w-7xl px-6">
-          <p className="font-display font-medium text-lime">
-            Un proyecto de <Link to="/" className="underline underline-offset-4">Creando Arcoíris</Link>
-          </p>
-          <h1 className="mt-5 max-w-4xl text-[clamp(2.4rem,6vw,5.2rem)] font-bold leading-[1.02] tracking-[-0.03em]">{c.titulo}</h1>
+          <h1 className="max-w-4xl text-[clamp(2.4rem,6vw,5.2rem)] font-bold leading-[1.02] tracking-[-0.03em]">{c.titulo}</h1>
 
           <div className="mt-14 grid items-center gap-12 md:grid-cols-12">
             <div className="md:col-span-4">

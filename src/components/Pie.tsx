@@ -30,7 +30,6 @@ export default function Pie() {
             <li><Link className="hover:text-white" to="/#proyectos">Proyectos</Link></li>
             <li><Link className="hover:text-white" to="/#nosotros">Nosotros</Link></li>
             <li><Link className="hover:text-white" to="/#contacto">Contacto</Link></li>
-            <li><Link className="hover:text-white" to="/banos">Baños Justos</Link></li>
           </ul>
         </nav>
 
