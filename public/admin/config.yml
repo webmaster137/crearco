@@ -5,7 +5,7 @@
 # ─────────────────────────────────────────────────────────────
 backend:
   name: github
-  repo: TU-USUARIO/crearco-site
+  repo: webmaster137/crearco
   branch: main
 
 site_url: https://TU-DOMINIO.com
