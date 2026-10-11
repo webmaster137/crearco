@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creando Arcoíris · Agencia de desarrollo de proyectos sociales</title>
+    <meta
+      name="description"
+      content="Diseñamos, desarrollamos e incubamos proyectos de educación, emprendimiento, cultura y ciudadanía que convierten ideas en oportunidades para las personas y los territorios."
+    />
+    <meta name="theme-color" content="#12596a" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <!-- Formulario "fantasma": Netlify lo lee al publicar para saber qué campos recibir.
+         El formulario real vive en src/sections/Contacto.tsx -->
+    <form name="contacto" data-netlify="true" netlify-honeypot="campo-trampa" hidden>
+      <input type="hidden" name="form-name" value="contacto" />
+      <input name="nombre" />
+      <input name="organizacion" />
+      <input name="correo" />
+      <input name="que" />
+      <textarea name="mensaje"></textarea>
+      <input name="campo-trampa" />
+    </form>
+    <form name="reporte" data-netlify="true" hidden>
+      <input type="hidden" name="form-name" value="reporte" />
+      <input name="lugar" />
+      <input name="fila" />
+      <input name="bano" />
+    </form>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
