@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Boton from "@/components/Boton";
+import MiniMenuBanometro from "@/components/MiniMenuBanometro";
 import Simulacion from "@/banos/Simulacion";
 import Calculadora from "@/banos/Calculadora";
 import Evidencia from "@/banos/Evidencia";
-import Arquitectura from "@/banos/Arquitectura";
 import Ciudades from "@/banos/Lugares";
 import EnvieEspacio from "@/banos/EnvieEspacio";
 import Reportar from "@/banos/Reportar";
@@ -52,13 +52,15 @@ export default function Banos() {
 
   return (
     <>
-      <section className="bg-teal-deep pb-24 pt-32 text-white md:pb-28 md:pt-40">
+      <MiniMenuBanometro />
+      <section className="-mt-12 bg-teal-deep pb-24 pt-40 text-white md:pb-28 md:pt-48">
         <div className="mx-auto max-w-7xl px-6">
           <p className="flex items-center gap-2.5 font-display text-base font-medium text-lime">
             <span className="h-2.5 w-2.5 rounded-full bg-[#e9bf1d]" aria-hidden="true" />
             {c.estado_etiqueta}
           </p>
-          <h1 className="mt-5 max-w-4xl text-[clamp(2.4rem,6vw,5.2rem)] font-bold leading-[1.02] tracking-[-0.03em]">{c.titulo}</h1>
+          <h1 className="mt-4 text-[clamp(3.6rem,11vw,8.5rem)] font-bold leading-[0.95] tracking-[-0.04em]">{c.nombre}</h1>
+          <p className="mt-5 max-w-3xl font-display text-[clamp(1.5rem,3.4vw,2.7rem)] font-medium leading-[1.12] tracking-[-0.02em] text-white/90">{c.claim}</p>
           <p className="mt-6 max-w-2xl text-white/70">{c.estado_texto}</p>
 
           <div className="mt-14 grid items-center gap-12 md:grid-cols-12">
@@ -92,7 +94,6 @@ export default function Banos() {
       <Simulacion alVisible={setSimVisible} />
       <Calculadora />
       <Evidencia />
-      <Arquitectura />
       <Ciudades />
       <EnvieEspacio />
 

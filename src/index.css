@@ -71,14 +71,14 @@
 .sim { position: relative; background: var(--color-paper); }
 .sim-sticky {
   position: sticky;
-  top: 4.25rem;
-  height: calc(100svh - 4.25rem);
+  top: 7.25rem;
+  height: calc(100svh - 7.25rem);
   display: flex;
   justify-content: center;
   padding: 0.5rem 1rem;
 }
 .sim-canvas { width: 100%; max-width: 520px; height: 100%; }
-.sim-pasos { position: relative; z-index: 2; margin-top: calc(4.25rem - 100svh); pointer-events: none; }
+.sim-pasos { position: relative; z-index: 2; margin-top: calc(7.25rem - 100svh); pointer-events: none; }
 .sim-paso {
   min-height: 100svh;
   display: flex;
@@ -149,3 +149,8 @@
   .menu-movil, .menu-item { animation: none; }
   .nav-link::after { transition: none; }
 }
+
+/* ── Bañómetro: mini menú ── */
+html:has(.mini-menu) { scroll-padding-top: 8.5rem; }
+.sin-barra { scrollbar-width: none; }
+.sin-barra::-webkit-scrollbar { display: none; }
