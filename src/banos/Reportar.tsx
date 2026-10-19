@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-/** Botón flotante que lleva al formulario "Envíenos su espacio". Se esconde donde estorbaría. */
+/**
+ * Botón "Envíenos su espacio": visible desde que se entra a la página.
+ * En computador queda arriba a la derecha, en el lugar de la barra del mini menú (pero fuera de ella);
+ * en celular, abajo a la derecha. Se esconde cuando ya se está viendo el formulario.
+ */
 export default function Reportar({ oculto }: { oculto?: boolean }) {
-  const [pasoPortada, setPasoPortada] = useState(false);
   const [enFormulario, setEnFormulario] = useState(false);
-
-  useEffect(() => {
-    const alScroll = () => setPasoPortada(window.scrollY > window.innerHeight * 0.7);
-    alScroll();
-    window.addEventListener("scroll", alScroll, { passive: true });
-    return () => window.removeEventListener("scroll", alScroll);
-  }, []);
 
   useEffect(() => {
     const el = document.getElementById("participa");
@@ -21,15 +17,15 @@ export default function Reportar({ oculto }: { oculto?: boolean }) {
     return () => obs.disconnect();
   }, []);
 
-  const escondido = oculto || !pasoPortada || enFormulario;
+  const escondido = enFormulario;
   return (
     <Link
       to="/banos#participa"
       tabIndex={escondido ? -1 : 0}
       aria-hidden={escondido}
-      className={`fixed bottom-5 right-5 z-40 inline-flex h-12 items-center rounded-xl bg-lime px-6 font-display font-semibold text-teal-deep shadow-lg transition-all hover:bg-white ${
-        escondido ? "pointer-events-none translate-y-4 opacity-0" : ""
-      }`}
+      className={`fixed bottom-5 right-5 z-[45] inline-flex h-9 items-center rounded-lg bg-lime px-4 font-display text-sm font-semibold text-teal-deep shadow-md transition-all hover:bg-white md:bottom-auto md:right-[max(1.5rem,calc((100%-80rem)/2+1.5rem))] md:top-[4.625rem] md:shadow-none ${
+        escondido ? "pointer-events-none opacity-0" : ""
+      } ${oculto ? "max-md:pointer-events-none max-md:translate-y-4 max-md:opacity-0" : ""}`}
     >
       Envíenos su espacio
     </Link>

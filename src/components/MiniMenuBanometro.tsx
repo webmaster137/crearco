@@ -35,18 +35,21 @@ function useSeccionActiva(): string | null {
 
 /**
  * Mini menú para moverse por el sitio de Bañómetro. Queda pegado bajo la cabecera general de
- * CrearCo, que se mantiene arriba para poder navegar por el resto del sitio.
+ * CrearCo. A la derecha deja libre el lugar del botón flotante "Envíenos su espacio".
  */
 export default function MiniMenuBanometro() {
   const activa = useSeccionActiva();
   return (
     <div className="mini-menu sticky top-[4.25rem] z-40 border-b border-white/10 bg-teal-deep">
       <div className="mx-auto flex h-12 max-w-7xl items-center justify-between gap-6 px-6">
-        <Link to="/banos" className="shrink-0 font-display text-[1.05rem] font-bold tracking-[-0.02em] text-white">
+        <Link to="/banos" className="hidden shrink-0 font-display text-[1.05rem] font-bold tracking-[-0.02em] text-white sm:block">
           {c.nombre}
         </Link>
 
-        <nav aria-label="Bañómetro" className="sin-barra -mr-6 flex min-w-0 flex-1 items-center justify-start gap-6 md:justify-end overflow-x-auto whitespace-nowrap pr-6 md:mr-0 md:flex-none md:gap-7 md:pr-0">
+        <nav
+          aria-label="Bañómetro"
+          className="sin-barra flex min-w-0 flex-1 items-center justify-between gap-4 overflow-x-auto whitespace-nowrap sm:flex-none sm:justify-end sm:gap-7 md:mr-48 md:overflow-visible"
+        >
           {ENLACES.map((e) => (
             <Link
               key={e.id}
@@ -58,13 +61,6 @@ export default function MiniMenuBanometro() {
             </Link>
           ))}
         </nav>
-
-        <Link
-          to="/banos#participa"
-          className="hidden h-9 shrink-0 items-center rounded-lg bg-lime px-4 font-display text-sm font-semibold text-teal-deep transition-colors hover:bg-white md:inline-flex"
-        >
-          Envíenos su espacio
-        </Link>
       </div>
     </div>
   );
