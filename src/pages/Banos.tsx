@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Boton from "@/components/Boton";
 import Simulacion from "@/banos/Simulacion";
 import Calculadora from "@/banos/Calculadora";
-import Lugares from "@/banos/Lugares";
+import Evidencia from "@/banos/Evidencia";
+import Arquitectura from "@/banos/Arquitectura";
+import Ciudades from "@/banos/Lugares";
+import EnvieEspacio from "@/banos/EnvieEspacio";
 import Reportar from "@/banos/Reportar";
 import { banosPagina as c, equipoBanos, fuentes } from "@/lib/content";
 
@@ -28,14 +31,35 @@ function ColaDemo() {
   );
 }
 
+const iniciales = (nombre: string) => {
+  const p = nombre.trim().split(/\s+/);
+  return (p[0][0] + (p.length > 1 ? p[p.length - 1][0] : "")).toUpperCase();
+};
+const FONDOS = ["#00a8e8", "#c0d66d", "#f2d96f"];
+
+/** Título y descripción de la pestaña, para esta página. */
+function useTituloPagina() {
+  useEffect(() => {
+    const anterior = document.title;
+    document.title = `${c.nombre}: ${c.claim.charAt(0).toLowerCase()}${c.claim.slice(1)}`;
+    return () => { document.title = anterior; };
+  }, []);
+}
+
 export default function Banos() {
   const [simVisible, setSimVisible] = useState(false);
+  useTituloPagina();
 
   return (
     <>
       <section className="bg-teal-deep pb-24 pt-32 text-white md:pb-28 md:pt-40">
         <div className="mx-auto max-w-7xl px-6">
-          <h1 className="max-w-4xl text-[clamp(2.4rem,6vw,5.2rem)] font-bold leading-[1.02] tracking-[-0.03em]">{c.titulo}</h1>
+          <p className="flex items-center gap-2.5 font-display text-base font-medium text-lime">
+            <span className="h-2.5 w-2.5 rounded-full bg-[#e9bf1d]" aria-hidden="true" />
+            {c.estado_etiqueta}
+          </p>
+          <h1 className="mt-5 max-w-4xl text-[clamp(2.4rem,6vw,5.2rem)] font-bold leading-[1.02] tracking-[-0.03em]">{c.titulo}</h1>
+          <p className="mt-6 max-w-2xl text-white/70">{c.estado_texto}</p>
 
           <div className="mt-14 grid items-center gap-12 md:grid-cols-12">
             <div className="md:col-span-4">
@@ -52,11 +76,14 @@ export default function Banos() {
       </section>
 
       <section className="bg-paper">
-        <dl className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-3">
+        <div className="mx-auto max-w-7xl px-6 pt-14">
+          <p className="font-display font-medium text-teal">{c.datos_titulo}</p>
+        </div>
+        <dl className="mx-auto grid max-w-7xl gap-10 px-6 pb-16 pt-6 md:grid-cols-3">
           {c.datos.map((d) => (
-            <div key={d.valor} className="border-t-2 border-teal pt-5">
+            <div key={d.texto} className="border-t-2 border-teal pt-5">
               <dt className="font-display text-5xl font-bold tracking-[-0.03em] text-teal">{d.valor}</dt>
-              <dd className="mt-2 max-w-[26ch] text-muted">{d.texto}</dd>
+              <dd className="mt-2 max-w-[28ch] text-muted">{d.texto}</dd>
             </div>
           ))}
         </dl>
@@ -64,19 +91,10 @@ export default function Banos() {
 
       <Simulacion alVisible={setSimVisible} />
       <Calculadora />
-      <Lugares />
-
-      <section id="reportar" className="bg-teal-deep py-24 text-white md:py-32">
-        <div className="mx-auto max-w-5xl px-6">
-          <h2 className="text-[clamp(2rem,4.2vw,3.5rem)]">{c.reportar_titulo}</h2>
-          <p className="mt-5 max-w-2xl text-lg text-white/75">{c.reportar_texto}</p>
-          <div className="mt-10 grid gap-8 md:grid-cols-2">
-            <div className="border-t border-white/20 pt-5"><p className="max-w-md text-white/85">{c.reportar_publico}</p></div>
-            <div className="border-t border-white/20 pt-5"><p className="max-w-md text-white/85">{c.reportar_privado}</p></div>
-          </div>
-          <p className="mt-8 max-w-2xl text-sm text-white/60">{c.reportar_nota}</p>
-        </div>
-      </section>
+      <Evidencia />
+      <Arquitectura />
+      <Ciudades />
+      <EnvieEspacio />
 
       <section id="fuentes" className="bg-paper py-24 md:py-32">
         <div className="mx-auto max-w-5xl px-6">
@@ -92,18 +110,34 @@ export default function Banos() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
 
-          <h2 className="mt-24 text-[clamp(1.8rem,3.4vw,2.8rem)]">{c.equipo_titulo}</h2>
+      <section id="equipo" className="bg-white py-24 md:py-32">
+        <div className="mx-auto max-w-5xl px-6">
+          <h2 className="text-[clamp(2rem,4.2vw,3.5rem)]">{c.equipo_titulo}</h2>
           <p className="mt-4 text-lg text-muted">{c.equipo_texto}</p>
-          <ul className="mt-8 grid gap-6 sm:grid-cols-2">
-            {equipoBanos.map((p) => (
-              <li key={p.slug} className="border-t border-line pt-5">
-                <p className="font-display text-xl font-semibold">{p.nombre}</p>
-                {p.rol && <p className="text-teal">{p.rol}</p>}
+          <ul className="mt-12 grid gap-10 sm:grid-cols-3">
+            {equipoBanos.map((p, i) => (
+              <li key={p.slug} className="flex items-center gap-4">
+                {p.foto ? (
+                  <img src={p.foto} alt={p.nombre} className="h-16 w-16 shrink-0 rounded-full object-cover" />
+                ) : (
+                  <span
+                    className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full font-display text-xl font-semibold text-teal-deep"
+                    style={{ background: FONDOS[i % FONDOS.length] }}
+                    aria-hidden="true"
+                  >
+                    {iniciales(p.nombre)}
+                  </span>
+                )}
+                <div>
+                  <p className="font-display text-xl font-semibold leading-tight">{p.nombre}</p>
+                  {p.rol && <p className="mt-0.5 text-teal">{p.rol}</p>}
+                </div>
               </li>
             ))}
           </ul>
-          <p className="mt-16 text-sm text-muted">{c.pie_nota}</p>
         </div>
       </section>
 

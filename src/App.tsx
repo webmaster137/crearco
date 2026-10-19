@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Cabecera from "@/components/Cabecera";
+import CabeceraBanometro from "@/components/CabeceraBanometro";
 import Pie from "@/components/Pie";
+import PieBanometro from "@/components/PieBanometro";
 import Inicio from "@/pages/Inicio";
 import Proyecto from "@/pages/Proyecto";
 import Banos from "@/pages/Banos";
@@ -22,6 +24,8 @@ function Desplazamiento() {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
+  const esBanometro = pathname === "/banos";
   return (
     <>
       <a
@@ -31,7 +35,7 @@ export default function App() {
         Saltar al contenido
       </a>
       <Desplazamiento />
-      <Cabecera />
+      {esBanometro ? <CabeceraBanometro /> : <Cabecera />}
       <main id="contenido">
         <Routes>
           <Route path="/" element={<Inicio />} />
@@ -40,7 +44,7 @@ export default function App() {
           <Route path="*" element={<NoEncontrada />} />
         </Routes>
       </main>
-      <Pie />
+      {esBanometro ? <PieBanometro /> : <Pie />}
     </>
   );
 }

@@ -77,10 +77,6 @@ export const equipo = cargar<Omit<Persona, "slug">>(
   import.meta.glob("/content/equipo/*.json", { eager: true, import: "default" }),
 ) as Persona[];
 
-export const lugares = cargar<Omit<Lugar, "slug">>(
-  import.meta.glob("/content/banos/lugares/*.json", { eager: true, import: "default" }),
-) as Lugar[];
-
 export const fuentes = cargar<Omit<Fuente, "slug">>(
   import.meta.glob("/content/banos/bibliografia/*.json", { eager: true, import: "default" }),
 ) as Fuente[];

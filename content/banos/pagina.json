@@ -1,21 +1,26 @@
 {
+  "nombre": "Bañómetro",
+  "claim": "Nada debería ser más democrático que usar un baño",
   "titulo": "Nada debería ser más democrático que usar un baño",
-  "dato_grande": "55–65 %",
-  "dato_grande_texto": "más tiempo tarda, en promedio, una visita al baño de mujeres.",
-  "intro": "Pero la fila no es igual para todos. Por qué las mujeres siempre esperan más, qué dice la evidencia y cómo deberían repartirse los baños públicos.",
+  "estado_etiqueta": "Piloto en construcción",
+  "estado_texto": "Esta página muestra la idea y todavía no recoge datos reales: las simulaciones son ilustrativas y lo que se escribe en los formularios aún no se guarda.",
+  "dato_grande": "1,5 a 2,3×",
+  "dato_grande_texto": "más tiempo tarda una mujer que un hombre en usar un baño público.",
+  "intro": "Bañómetro es una iniciativa de investigación y ciencia ciudadana liderada por mujeres. Documenta cómo el diseño y la distribución de los baños públicos responden, o no, a las necesidades de quienes los usan.",
   "boton_intro": "Ver cómo pasa",
+  "datos_titulo": "Metas del proyecto",
   "datos": [
     {
-      "valor": "34×",
-      "texto": "más espera pueden tener las mujeres en un baño congestionado"
+      "valor": "3",
+      "texto": "ciudades para empezar: Bogotá, Armenia y Pereira"
     },
     {
-      "valor": "2 a 1",
-      "texto": "la proporción de aparatos que recomienda la investigación"
+      "valor": "100",
+      "texto": "auditorías técnicas en baños públicos de alto flujo"
     },
     {
-      "valor": "0 de 5",
-      "texto": "centros comerciales revisados publican sus baños por género"
+      "valor": "300",
+      "texto": "reportes ciudadanos como mínimo, revisados antes de publicarse"
     }
   ],
   "pasos_simulacion": [
@@ -29,7 +34,7 @@
     },
     {
       "titulo": "Una visita de ellas tarda más",
-      "texto": "Entre 55% y 65% más, por la ropa, la menstruación, acompañar niños y la anatomía. Con los mismos aparatos, salen más despacio de lo que llegan. Así se forma la fila."
+      "texto": "Entre 1,5 y 2,3 veces más, por la ropa, la menstruación, acompañar niños y la anatomía. Con los mismos aparatos, salen más despacio de lo que llegan. Así se forma la fila."
     },
     {
       "titulo": "Hay una solución hace décadas, pero nadie la aplica",
@@ -39,17 +44,139 @@
   "calculadora_titulo": "¿Cómo deberían estar divididos tus baños?",
   "calculadora_texto": "Ingresa los datos de un lugar. Con un modelo de colas —no una proporción fija— la herramienta estima las esperas y la distribución justa.",
   "calculadora_nota": "Estimación ilustrativa. Tiempos de uso asumidos: 90 s y 140 s, según la literatura de potty parity.",
-  "lugares_titulo": "Investigación por ciudades",
-  "lugares_texto": "Lugares públicos reconocibles. El contexto es real; el conteo de baños está marcado como estimado hasta verificarse en terreno.",
-  "lugares_nota": "El número de baños por género no es información pública en Colombia. Esa ausencia de datos es parte de lo que este proyecto busca visibilizar.",
-  "reportar_titulo": "Reporta un baño",
-  "reportar_texto": "En diez segundos. Solo lo esencial es obligatorio.",
-  "reportar_publico": "Lugar público (centro comercial, estadio): la fuerza está en el volumen. Cuando varias personas reportan algo parecido, el dato se marca como confiable.",
-  "reportar_privado": "Lugar privado (una oficina): basta uno o dos reportes. Se muestra como reporte individual, sin exigir volumen.",
-  "reportar_nota": "Cada reporte se revisa antes de sumarse a los datos. No pedimos fotos ni tu ubicación por ahora.",
+  "evidencia_titulo": "Cómo se construye la evidencia",
+  "evidencia_texto": "Bañómetro combina tres fuentes que se alimentan entre sí. Nada se publica sin revisión.",
+  "evidencia": [
+    {
+      "titulo": "Investigación teórica",
+      "texto": "Parte de la teoría de colas y de estudios sobre equidad en el acceso a baños públicos, y contrasta lo que encuentra con la norma colombiana (NTC 1500). Las fuentes están al final de esta página.",
+      "estado": "En curso"
+    },
+    {
+      "titulo": "Investigación de campo",
+      "texto": "Una red de al menos 10 investigadoras, formadas por el proyecto, realiza 100 auditorías técnicas en baños públicos de alto flujo, con protocolos comunes para comparar entre ciudades.",
+      "estado": "Por ejecutar"
+    },
+    {
+      "titulo": "Participación ciudadana",
+      "texto": "Cualquier persona puede enviar un espacio. Todo lo que llega queda pendiente: el equipo lo revisa y solo lo publica cuando es confiable.",
+      "estado": "En demostración"
+    }
+  ],
+  "evidencia_cierre": "Las tres fuentes alimentan una misma base de datos abierta. De ahí salen el mapa, la simulación de cada lugar verificado y el Informe Nacional de Recomendaciones, que se entrega a autoridades y administradores de espacios de alto flujo.",
+  "arquitectura_titulo": "Cómo está pensada la plataforma",
+  "arquitectura_texto": "Funciona como un edificio de tres zonas: una vitrina que todos ven, un archivo con llave donde se guarda lo importante y un equipo de vigilancia que cuida todo, siempre. Lo que se ve y lo que se guarda están separados a propósito. Esta página es el piloto; lo demás se construye con el financiamiento.",
+  "arquitectura_partes": [
+    {
+      "icono": "gente",
+      "titulo": "La gente",
+      "texto": "Visitantes, ciudadanía, investigadoras y equipo del proyecto.",
+      "servicio": "Celular o computador"
+    },
+    {
+      "icono": "vitrina",
+      "titulo": "La vitrina",
+      "texto": "Lo que ve la gente: el mapa, las cifras y una página por cada lugar verificado.",
+      "servicio": "Servicio: Netlify"
+    },
+    {
+      "icono": "archivo",
+      "titulo": "El archivo con llave",
+      "texto": "Donde se guardan los datos, las fotos y los planos. Cada persona ve solo lo suyo y todo se revisa antes de publicarse.",
+      "servicio": "Servicio: Supabase"
+    },
+    {
+      "icono": "cuidado",
+      "titulo": "Quienes cuidan",
+      "texto": "Copias de seguridad, alarmas y un tope de gasto.",
+      "servicio": "Siempre activos"
+    }
+  ],
+  "piloto_titulo": "Qué es piloto y qué se construye",
+  "piloto_filas": [
+    {
+      "pieza": "Simulación de filas",
+      "hoy": "Animación ilustrativa, sin datos reales",
+      "luego": "Se alimenta de los datos de cada lugar"
+    },
+    {
+      "pieza": "Calculadora de distribución",
+      "hoy": "Calcula con fórmulas sobre lo que la persona escribe",
+      "luego": "Se conecta a los datos verificados"
+    },
+    {
+      "pieza": "Ciudades y lugares",
+      "hoy": "Tres ciudades definidas, sin lugares auditados todavía",
+      "luego": "Lugares auditados y reportados por la ciudadanía"
+    },
+    {
+      "pieza": "Envío de espacios",
+      "hoy": "Formulario de demostración que no guarda nada",
+      "luego": "Envíos guardados, revisados y publicados"
+    },
+    {
+      "pieza": "Cuentas y fichas de auditoría",
+      "hoy": "No existe",
+      "luego": "Las investigadoras ingresan fichas con datos y fotos"
+    },
+    {
+      "pieza": "Base de datos y fotos",
+      "hoy": "No existe",
+      "luego": "Base de datos abierta y almacenamiento de fotos"
+    },
+    {
+      "pieza": "Mapa y minisitio por lugar",
+      "hoy": "No existe",
+      "luego": "Mapa público y una página por lugar verificado, con la simulación de cómo es hoy y cómo debería ser"
+    },
+    {
+      "pieza": "Revisión de lo que llega",
+      "hoy": "No existe",
+      "luego": "Revisión del equipo antes de publicar"
+    },
+    {
+      "pieza": "Datos abiertos",
+      "hoy": "No existe",
+      "luego": "Descarga de los datos en un archivo abierto"
+    }
+  ],
+  "ciudades_titulo": "Tres ciudades para empezar",
+  "ciudades_texto": "Vamos a investigar baños públicos de alto flujo en una capital y dos ciudades intermedias, que muchas veces no se incluyen en este tipo de estudios.",
+  "ciudades": [
+    {
+      "nombre": "Bogotá",
+      "texto": "Capital. Auditorías en centros comerciales, edificios de entidades públicas, universidades y otros espacios de alto flujo, y tres de las seis jornadas de activación.",
+      "estado": "Por investigar"
+    },
+    {
+      "nombre": "Armenia",
+      "texto": "Ciudad intermedia del Eje Cafetero. Auditorías en baños de alto flujo y, junto con Pereira, tres jornadas de activación. El informe se entrega a las autoridades locales y a la EDUA.",
+      "estado": "Por investigar"
+    },
+    {
+      "nombre": "Pereira",
+      "texto": "Ciudad intermedia del Eje Cafetero. Auditorías en baños de alto flujo y, junto con Armenia, tres jornadas de activación. El informe se entrega a las autoridades locales.",
+      "estado": "Por investigar"
+    }
+  ],
+  "ciudades_nota": "Todavía no hay lugares auditados. El mapa se irá llenando con lo que encuentre el trabajo de campo y con los envíos de la ciudadanía que el equipo verifique.",
+  "participa_titulo": "Envíenos su espacio",
+  "participa_texto": "¿Conoce un baño público que deberíamos revisar? Cuéntenos dónde está y cómo es usarlo. Así se vería el formulario cuando la plataforma esté en funcionamiento.",
+  "participa_aviso_titulo": "En construcción",
+  "participa_aviso_texto": "Este formulario es una demostración: por ahora no recibe ni guarda nada.",
+  "participa_publico": "Espacio público (centro comercial, entidad, universidad, terminal): la fuerza está en el volumen. Cuando varias personas reportan algo parecido, el dato se marca como confiable.",
+  "participa_privado": "Espacio privado (una oficina, un restaurante): basta uno o dos reportes. Se muestra como reporte individual, sin exigir volumen.",
+  "participa_pasos_titulo": "Qué pasará con su envío",
+  "participa_pasos": [
+    "Llega como pendiente.",
+    "El equipo lo revisa antes de publicarlo.",
+    "Si es confiable, aparece en el mapa y suma a la base de datos abierta."
+  ],
+  "participa_exito_titulo": "Así se vería la confirmación",
+  "participa_exito_texto": "Gracias por participar. Como esto es una demostración, su envío no se guardó. Cuando la plataforma esté en funcionamiento, llegará como pendiente y el equipo lo revisará.",
   "bibliografia_titulo": "Bibliografía",
   "bibliografia_texto": "Base viva. El equipo investigador seguirá alimentando esta sección.",
   "equipo_titulo": "Equipo",
   "equipo_texto": "Quiénes estamos detrás de Bañómetro.",
-  "pie_nota": "Prototipo. Los datos de baños están sujetos a verificación en terreno."
+  "pie_nota": "Piloto en construcción: las simulaciones son ilustrativas y todavía no hay datos reales."
 }
