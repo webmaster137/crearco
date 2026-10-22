@@ -52,8 +52,7 @@ export default function Banos() {
 
   return (
     <>
-      <MiniMenuBanometro />
-      <section className="-mt-12 bg-teal-deep pb-24 pt-40 text-white md:pb-28 md:pt-48">
+      <section className="bg-teal-deep pb-24 pt-32 text-white md:pb-28 md:pt-40">
         <div className="mx-auto max-w-7xl px-6">
           <p className="flex items-center gap-2.5 font-display text-base font-medium text-lime">
             <span className="h-2.5 w-2.5 rounded-full bg-[#e9bf1d]" aria-hidden="true" />
@@ -118,30 +117,29 @@ export default function Banos() {
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="text-[clamp(2rem,4.2vw,3.5rem)]">{c.equipo_titulo}</h2>
           <p className="mt-4 text-lg text-muted">{c.equipo_texto}</p>
-          <ul className="mt-12 grid gap-10 sm:grid-cols-3">
+          <ul className="mt-12 grid gap-12 sm:grid-cols-3">
             {equipoBanos.map((p, i) => (
-              <li key={p.slug} className="flex items-center gap-4">
+              <li key={p.slug}>
                 {p.foto ? (
-                  <img src={p.foto} alt={p.nombre} className="h-16 w-16 shrink-0 rounded-full object-cover" />
+                  <img src={p.foto} alt={p.nombre} loading="lazy" className="h-32 w-32 rounded-full object-cover" />
                 ) : (
                   <span
-                    className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full font-display text-xl font-semibold text-teal-deep"
+                    className="flex h-32 w-32 items-center justify-center rounded-full font-display text-3xl font-semibold text-teal-deep"
                     style={{ background: FONDOS[i % FONDOS.length] }}
                     aria-hidden="true"
                   >
                     {iniciales(p.nombre)}
                   </span>
                 )}
-                <div>
-                  <p className="font-display text-xl font-semibold leading-tight">{p.nombre}</p>
-                  {p.rol && <p className="mt-0.5 text-teal">{p.rol}</p>}
-                </div>
+                <p className="mt-5 font-display text-xl font-semibold leading-tight">{p.nombre}</p>
+                {p.rol && <p className="mt-1 text-teal">{p.rol}</p>}
               </li>
             ))}
           </ul>
         </div>
       </section>
 
+      <MiniMenuBanometro />
       <Reportar oculto={simVisible} />
     </>
   );

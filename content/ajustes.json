@@ -4,7 +4,24 @@
   "descripcion_sitio": "Diseñamos, desarrollamos e incubamos proyectos de educación, emprendimiento, cultura y ciudadanía que convierten ideas en oportunidades para las personas y los territorios.",
   "correo": "",
   "telefono": "",
-  "redes": [],
+  "redes": [
+    {
+      "nombre": "Facebook",
+      "enlace": "https://www.facebook.com/share/1C48qVXTt5/"
+    },
+    {
+      "nombre": "YouTube",
+      "enlace": "https://youtube.com/@creandoarcoiris"
+    },
+    {
+      "nombre": "TikTok",
+      "enlace": "https://www.tiktok.com/@englishwizards_col"
+    },
+    {
+      "nombre": "Instagram",
+      "enlace": "https://www.instagram.com/crearco_ong"
+    }
+  ],
   "texto_pie": "Agencia de desarrollo de proyectos sociales. Diseñamos, desarrollamos e incubamos proyectos que transforman territorios.",
   "ambitos_pie": "Educación, juventud, emprendimiento, cultura, ciudadanía, innovación, desarrollo territorial y economía circular."
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CheckCircle } from "@phosphor-icons/react";
 import Boton from "@/components/Boton";
+import Redes from "@/components/Redes";
 import { inicio } from "@/lib/content";
 
 type Estado = "libre" | "enviando" | "enviado" | "error";
@@ -42,6 +43,8 @@ export default function Contacto() {
         <div className="md:col-span-5">
           <h2 className="text-[clamp(2rem,4.2vw,3.5rem)]">{c.titulo}</h2>
           <p className="mt-6 max-w-md text-lg text-white/75">{c.texto}</p>
+          <p className="mt-10 font-display font-medium text-lime">Nuestras redes</p>
+          <Redes className="mt-4" />
         </div>
 
         <div className="md:col-span-6 md:col-start-7">

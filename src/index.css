@@ -71,8 +71,8 @@
 .sim { position: relative; background: var(--color-paper); }
 .sim-sticky {
   position: sticky;
-  top: 7.25rem;
-  height: calc(100svh - 7.25rem);
+  top: 4.25rem;
+  height: calc(100svh - 7.25rem); /* cabecera 4,25 rem + barra inferior 3 rem */
   display: flex;
   justify-content: center;
   padding: 0.5rem 1rem;
@@ -84,7 +84,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 0 1rem 4svh;
+  padding: 0 1rem calc(3rem + 3svh); /* deja libre la barra inferior */
 }
 .sim-paso:first-child { min-height: 120svh; }
 .sim-tarjeta {
@@ -151,7 +151,6 @@
 }
 
 /* ── Bañómetro: mini menú ── */
-html:has(.mini-menu) { scroll-padding-top: 8.5rem; }
 .sin-barra { scrollbar-width: none; }
 .sin-barra::-webkit-scrollbar { display: none; }
 .mini-menu .nav-link::after { bottom: 3px; }

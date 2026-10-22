@@ -10,7 +10,7 @@ const ENLACES = [
 ];
 const IDS = ["como-pasa", "evidencia", "ciudades", "participa", "fuentes", "equipo"];
 
-/** Sección que se está leyendo: la última cuyo borde superior ya pasó la barra. */
+/** Sección que se está leyendo: la última cuyo borde superior ya pasó la cabecera. */
 function useSeccionActiva(): string | null {
   const [activa, setActiva] = useState<string | null>(null);
   useEffect(() => {
@@ -33,14 +33,33 @@ function useSeccionActiva(): string | null {
   return activa;
 }
 
+/** true cuando el pie de página está a la vista (ahí la barra inferior se esconde para no taparlo). */
+export function usePieVisible(): boolean {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const pie = document.querySelector("footer");
+    if (!pie) return;
+    const obs = new IntersectionObserver((es) => es.forEach((e) => setVisible(e.isIntersecting)));
+    obs.observe(pie);
+    return () => obs.disconnect();
+  }, []);
+  return visible;
+}
+
 /**
- * Mini menú para moverse por el sitio de Bañómetro. Queda pegado bajo la cabecera general de
- * CrearCo. A la derecha deja libre el lugar del botón flotante "Envíenos su espacio".
+ * Menú para moverse por el sitio de Bañómetro: barra fija en la parte inferior de la pantalla
+ * (computador y celular). La cabecera general de CrearCo se mantiene arriba.
+ * A la derecha deja libre el lugar del botón flotante "Envíenos su espacio".
  */
 export default function MiniMenuBanometro() {
   const activa = useSeccionActiva();
+  const pieVisible = usePieVisible();
   return (
-    <div className="mini-menu sticky top-[4.25rem] z-40 border-b border-white/10 bg-teal-deep">
+    <div
+      className={`mini-menu fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-teal-deep pb-[env(safe-area-inset-bottom)] transition-transform duration-300 ${
+        pieVisible ? "translate-y-full" : ""
+      }`}
+    >
       <div className="mx-auto flex h-12 max-w-7xl items-center justify-between gap-6 px-6">
         <Link to="/banos" className="hidden shrink-0 font-display text-[1.05rem] font-bold tracking-[-0.02em] text-white sm:block">
           {c.nombre}

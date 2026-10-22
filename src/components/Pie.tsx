@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo-horizontal-blanco.svg";
 import { ajustes } from "@/lib/content";
+import Redes from "./Redes";
 
 export default function Pie() {
   const anio = new Date().getFullYear();
@@ -10,6 +11,7 @@ export default function Pie() {
         <div className="md:col-span-5">
           <img src={logo} alt={ajustes.nombre} className="h-10 w-auto" />
           <p className="mt-6 max-w-sm text-white/70">{ajustes.texto_pie}</p>
+          <Redes className="mt-6" />
           {(ajustes.correo || ajustes.telefono) && (
             <p className="mt-6 text-white/90">
               {ajustes.correo && (
